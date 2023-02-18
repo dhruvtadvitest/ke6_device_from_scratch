@@ -10,8 +10,9 @@ jobs:
             apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 -y
             git clone https://github.com/AndroidDumps/dumpyara
             cd dumpyara
+            python3 -m pip install protobuf==3.19.4
             bash setup.sh
-            wget -o zipname.zip https://drive.google.com/uc?export=download&id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc
+            wget -o zipname.zip https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=fdbbb730-d429-4fc7-b46a-9bda16c413d8&at=ALgDtswh45b7IKNq2KT7wS-3loQX:1676703670381
             bash dumpyara.sh ./zipname.zip
             
             
