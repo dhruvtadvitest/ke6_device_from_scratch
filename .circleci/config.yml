@@ -10,8 +10,7 @@ jobs:
             apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 python3-pip -y
              git clone --single-branch https://github.com/DumprX/DumprX.git
              cd DumprX
-             wget -o file.zip "https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=c393c917-cfd6-4f0c-a7fa-f2acf6a35a69&at=ALgDtswqrOh-9M1zRBaXooNOhsrE:1676705490094"
-             ./dumper.sh file.zip
+             ./dumper.sh 'https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view'
             
 workflows:
   version: 2.1
