@@ -8,8 +8,8 @@ jobs:
           name: "dumprX"
           command: |
             apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 python3-pip -y
-            sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename
-            sudo apt install liblzma-dev python3-pip brotli lz4
+            sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename -y
+            sudo apt install liblzma-dev python3-pip brotli lz4 -y
             pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb pycryptodom
             
      
