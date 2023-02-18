@@ -12,18 +12,14 @@ jobs:
             sudo apt install liblzma-dev python3-pip brotli lz4
             pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb pycryptodom
             
-      - run:
-          name: "setup dumprx"
-          command: |
+     
             mkdir workspace
             cd workspace
             git clone https://github.com/cd-Crypton/DumprX.git
             cd DumprX
             sudo bash setup.sh
             
-      - run:
-          name: "RUN"
-          COMMAND: |
+   
             ./dumper.sh 'https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view'
             
 
