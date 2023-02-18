@@ -7,7 +7,7 @@ jobs:
       - run:
           name: "Dump"
           command: |
-            apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo -y
+            apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3-y
             git clone https://github.com/AndroidDumps/dumpyara
             cd dumpyara
             bash setup.sh
