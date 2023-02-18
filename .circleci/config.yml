@@ -8,12 +8,9 @@ jobs:
           name: "Dump"
           command: |
             apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 python3-pip -y
-            git clone https://github.com/AndroidDumps/dumpyara
-            cd dumpyara
-            python3 -m pip install protobuf==3.19.4
-            bash setup.sh
-            bash dumpyara.sh "https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=6965b9b2-0484-4f5e-9859-5a0ce4dd392d&at=ALgDtsy3MXwkpU9N2LJ5UaZcpG3W:1676704758346"
-            
+             git clone --single-branch https://github.com/DumprX/DumprX.git
+             cd DumprX
+             ./dumper.sh "https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=dba8bfbf-5614-4183-8506-9fe08dbdc3d0&at=ALgDtsz5XpYjG8jPI7HzTyuaXgTq:1676705184693"
             
 workflows:
   version: 2.1
