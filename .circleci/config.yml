@@ -3,6 +3,13 @@ jobs:
   build:
    docker:
       - image: ubuntu:20.04
+   environment:
+      URL: "https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view"
+      FIRMWARE_NAME: "TECNO-KE6"
+      VENDOR_NAME: "TECNO"
+      
+
+   
    steps:
       - run:
           name: "dumprX"
@@ -14,15 +21,26 @@ jobs:
             export DEBIAN_FRONTEND=noninteractive
             apt-get install tzdata -y
             
+            git config --global user.name "test"
+            git config --global user.email "test@gmail.com"
+            
      
             mkdir workspace
             cd workspace
             git clone https://github.com/cd-Crypton/DumprX.git
             cd DumprX
             sudo bash setup.sh
+            ./dumper.sh ${URL}
             
-   
-            ./dumper.sh 'https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view'
+            
+            git init
+            git add .
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin https://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@github.com/dhruvtadvitest/tecn0
+            git push -u origin main
+
+            
             
 
 
