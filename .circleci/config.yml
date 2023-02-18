@@ -26,10 +26,5 @@ jobs:
           COMMAND: |
             ./dumper.sh 'https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view'
             
-workflows:
-  version: 2.1
-  remote_builder:
-    jobs:
-      - build:
-          context: org-global
+
 
