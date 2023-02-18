@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  build:
+   docker:
+      - image: ubuntu:18.04
+   steps:
+      - run:
+          name: "Dump"
+          command: |
+            apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc
+            git clone https://github.com/AndroidDumps/dumpyara
+            cd dumpyara
+            bash setup.sh
+            wget -o zipname.zip https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=53358903-86d6-4d38-8c73-9d86c2e66272&at=ALgDtsxQkszSDLss6WqH9tdsuyou:1676702851660
+            bash dumpyara.sh ./zipname.zip
+            
+            
+workflows:
+  version: 2.1
+  remote_builder:
+    jobs:
+      - build:
+          context: org-global
