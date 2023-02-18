@@ -12,9 +12,7 @@ jobs:
             cd dumpyara
             python3 -m pip install protobuf==3.19.4
             bash setup.sh
-            wget -o zipname.zip 'https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=f6c55403-2452-4065-b5b5-45306e2acc10&at=ALgDtszVnbhZw1C_90UhApRuACtf:1676704103159'
-            file zipfile.zip
-            bash dumpyara.sh ./zipname.zip
+            bash dumpyara.sh "https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=6965b9b2-0484-4f5e-9859-5a0ce4dd392d&at=ALgDtsy3MXwkpU9N2LJ5UaZcpG3W:1676704758346"
             
             
 workflows:
