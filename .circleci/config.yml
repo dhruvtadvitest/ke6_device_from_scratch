@@ -11,6 +11,8 @@ jobs:
             sudo apt install unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack arj cabextract rename -y
             sudo apt install liblzma-dev python3-pip brotli lz4 -y
             pip install backports.lzma protobuf pycrypto twrpdtgen extract-dtb 
+            export DEBIAN_FRONTEND=noninteractive
+            apt-get install tzdata-y
             
      
             mkdir workspace
