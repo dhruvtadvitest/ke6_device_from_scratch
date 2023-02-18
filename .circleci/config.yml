@@ -11,7 +11,7 @@ jobs:
             git clone https://github.com/AndroidDumps/dumpyara
             cd dumpyara
             bash setup.sh
-            wget -o zipname.zip https://drive.google.com/u/0/uc?id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc&export=download&confirm=t&uuid=53358903-86d6-4d38-8c73-9d86c2e66272&at=ALgDtsxQkszSDLss6WqH9tdsuyou:1676702851660
+            wget -o zipname.zip https://drive.google.com/uc?export=download&id=1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc
             bash dumpyara.sh ./zipname.zip
             
             
