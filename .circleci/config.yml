@@ -7,10 +7,7 @@ jobs:
       - run:
           name: "Dump"
           command: |
-            apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 python3-pip -y
-            add-apt-repository ppa:savoury1/backports
-            apt-get update
-            apt-get install aria2 --only-upgrade
+            apt-get update -y && apt-get upgrade -y && apt-get install wget curl git zip unzip gcc build-essential bc sudo python3 python3-pip aria2 -y
             git clone --single-branch https://github.com/DumprX/DumprX.git
             cd DumprX
             ./dumper.sh 'https://drive.google.com/file/d/1OI9XhtdVsdqxQG-hBziwYD3LsECgoVoc/view'
